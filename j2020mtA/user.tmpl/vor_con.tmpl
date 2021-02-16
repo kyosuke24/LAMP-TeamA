@@ -1,0 +1,111 @@
+<html>
+<head>  
+
+<link rel="stylesheet" type="text/css" href="../Smarty/css/user/user.css">
+<meta charset = "utf-8">
+<title>ボランティア参加確認</title>
+{literal}
+<style>
+li {width: 200px;}
+li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    }
+ul{overflow: hidden;}
+li{float: left;}
+ul li{display: inline;}
+li {text-align: center;}
+</style>
+{/literal}
+
+<script type="text/javascript">
+<!--
+function set_func_form(fn,pm){
+    document.form1.target = "_self";
+    document.form1.func.value = fn;
+    document.form1.param.value = pm;
+    document.form1.submit();
+}
+
+
+// -->
+</script>
+
+</head>
+<body>
+<text><h1>双葉町災害対策会社</h1></text>
+<div align = "right">
+<button onclick="location.href='./sign_up.php'">新規登録</button>
+<button onclick="location.href='./log_in.php'">ログイン</button>
+</div> 
+<ul>
+<li><a href="./top.php"><h3>ホーム</h3></a></li>
+<li><a href="./group.php"><h3>団体挨拶</h3></a></li>
+<li><a href="./vor.php"><h3>ボランティア参加</h3></a></li>
+<li><a href="./help.php"><h3>お問い合わせ</h3></a></li>
+<li><a href="./my_page.php"><h3>マイページ</h3></a></li>
+<li><a href="./souvenir.php"><h3>記念品</h3></a></li>
+</ul>  
+<h1 style="text-align:center">ボランティアの参加確認</h1><br>
+
+<!-- コンテンツ　-->
+<div id="inquiry">
+<form name="form1" action="{$smarty.server.PHP_SELF}" method="post" >
+
+<table align="center">
+<tr>
+<td>
+<input type="hidden" name="Vor_name" value="{$smarty.post.Vor_name|escape}" ></td>
+</tr>
+<tr>
+<td>
+<input type="hidden" name="Vor_day" value="{$smarty.post.Vor_day|escape}" ></td>
+</tr>
+<tr>
+<td>
+<input type="hidden"   name="Vor_finishday" value="{$smarty.post.Vor_finishday|escape}">
+</td>
+</tr>
+<tr>
+<td>
+<input type="hidden"   name="Vor_number" value="{$smarty.post.Vor_number|escape}">
+</td>
+</tr>
+<tr>
+<td>
+<input type="hidden"   name="Vor_place" value="{$smarty.post.Vor_place|escape}">
+</td>
+</tr>
+<tr>
+<td>
+<input type="hidden"   name="Vor_content" value="{$smarty.post.Vor_content|escape}">
+</td>
+</tr>
+<tr>
+<td>
+<input type="hidden"   name="Vor_explanation" value="{$smarty.post.Vor_explanation|escape}">
+</td>
+</tr>
+
+<tr>
+<td class="nobottom">
+参加を確定してよろしいですか？
+</td>
+</tr>
+</table>
+<input type="hidden" name="func" value="" />
+<input type="hidden" name="param" value="" />
+<input type="hidden" name="Vor_id" value="{$Vor_id}" />
+<input type="hidden" name="Vor_id" value="{$Vor_id}" />
+<p align="center">
+<input type="button" class="btn-flat-border" value="戻る" onClick="set_func_form('edit','')" />&nbsp;
+<input type="button" class="btn-flat-border" value="確定" onClick="set_func_form('set','')" />
+</p>
+</form>
+</div>
+<!-- /コンテンツ　-->
+
+
+</body>
+</html>

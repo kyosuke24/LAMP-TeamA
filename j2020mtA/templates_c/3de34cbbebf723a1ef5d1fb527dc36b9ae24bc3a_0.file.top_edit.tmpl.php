@@ -1,0 +1,150 @@
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2020-06-05 15:47:52
+  from '/home/j2020tmA/public_html/Smarty/templates/admin/top_edit.tmpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_5ed9ea9865b0c9_36332372',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '3de34cbbebf723a1ef5d1fb527dc36b9ae24bc3a' => 
+    array (
+      0 => '/home/j2020tmA/public_html/Smarty/templates/admin/top_edit.tmpl',
+      1 => 1591339590,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5ed9ea9865b0c9_36332372 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トップページ編集</title>
+</head>
+<body>
+<div style="position:absolute; top:0px; left:600px;">トップページ編集</div><br>
+<div style="position:absolute; left:400px;">スライド画像設定</div><br>
+<br>
+<div align = "center">
+<img src="image/top_edit.jpg" alt="ボランティア" width="200" height="200">
+<img src="image/top_edit(1).jpg" alt="ボランティア(1)" width="200" height="200">
+<button onclick="location.href=''" style="width:200px;height:200px; position: absolute; left: 66%; top: 10%">＋</button>
+
+</div>
+
+
+<div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; text-align:center; border:none;"><br>
+
+    <input type="button" value="設定完了">
+</div>
+
+
+
+<div style="position:absolute; top:0px; left:100px;">
+<style>
+h1{
+    font-size:medium;
+    margin:0;
+    padding-top:15px;
+    text-align:center;
+}
+nav {
+    float:left;
+}
+ul {
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #eeeeee;
+}
+li a {
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+	color: #000000;
+}
+li {
+	text-align: center;
+}
+li:last-child {
+	border-bottom: none;
+}
+li a.active {
+	color: #ffffff;
+	background-color: #da3c41;
+}
+li a:hover:not(.active) {
+	color: #ffffff;
+	background-color: #1b2538;
+}
+
+article .box1 {
+    padding : 240px 480px;
+    border: solid 1px #000000;
+    position: relative;
+    position:  absolute;        /* 要素の配置方法を指定 */
+    left:  280px;                /* 左からの位置指定 */
+    top: 50px;
+}
+article .gazou {
+    font-size: 100%;
+    position:  absolute;      
+    font-weight: bold;   
+    left:  300px;                
+    top: 70px;  
+}
+article .img {
+    padding : 110px 150px;
+    border: solid 1px #000000;
+    position: relative;
+    position:  absolute;        
+    left:  295px;                
+    top: 95px;
+}
+article .aisatu {
+    font-size: 100%;
+    position:  absolute;      
+    font-weight: bold;   
+    left:  300px;                
+    top: 330px;  
+}
+article .note {
+    padding : 80px 400px;
+    border: solid 1px #000000;
+    position: relative;
+    position:  absolute;        
+    left:  295px;                
+    top: 355px;
+}
+article div {
+    position: relative;
+    left:  880px;                
+    top: 450px;  
+}
+</style>
+
+
+<ul>
+<li><a href="./log_out.php">ログアウト</a></li>
+    <li><a href="./top_edit.php">トップページ管理</a></li>
+    <li><a href="./ad_management.php">管理者管理</a></li>
+    <li><a href="./ad_sign.php">管理者登録</a></li>
+    <li><a href="./user_management.php">ユーザー管理</a></li>
+    <li><a href="./vor_list.php">ボランティア管理</a></li>
+    <li><a href="./vor_edit.php">ボランティア編集</a></li>
+    <li><a href="./help_edit.php">お問い合わせ</a></li>
+    <li><a href="./group_edit.php">団体からの挨拶編集</a></li>
+    <li><a href="./souvenir_list.php">記念品管理</a></li>
+    <li><a href="./souvenir_edit.php">記念品編集</a></li></ul>
+</div>
+</body>
+</html><?php }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<link rel="stylesheet" type="text/css" href="../Smarty/css/admin/admin.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <title>管理者管理</title>
+
+</head>
+
+<!--
+やることメモ
+　・テーブルのメニューと新規登録ボタンの位置関係を依存関係にして、テーブルのサイズが変動してもボタンの位置がずれないようにする。
+
+-->
+
+<body>
+<div id="container">
+{include file='gmenu_admin.tmpl'} 
+<div align = "right">
+<button onclick="location.href='./ad_sign.php'">管理者登録</button>
+</div>
+
+<div id="inquiry">
+  <form name="form1" action="{$tgt_uri}" method="post" >
+{$ERR_STR}
+<p>{$pager_arr}</p>
+
+<table>
+<tr>
+<th>管理者ID</th>
+<th>名前</th>
+<th>カナ</th>
+<th>メールアドレス</th>
+<th>パスワード</th>
+</tr>
+{foreach from=$rows key=k item=value}
+<tr>
+<td class="center">
+{$value.Admin_id}
+</td>
+<td class="center">
+{$value.Admin_name}
+</td>
+<td class="center">
+{$value.Admin_kana}
+</td>
+<td class="center">
+{$value.Admin_mail}
+</td>
+<td class="center">
+{$value.Admin_pass}
+</td>
+
+
+{/foreach}
+</table>
+<input type="hidden" name="func" value="" />
+<input type="hidden" name="param" value="" />
+</form>
+<p>&nbsp;</p>
+
+</div>
+</div>
+
+</body>
+
+<!--css-->
+{literal}
+<style>
+/*テーブル*/
+table {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+table th{
+  padding : 7px 60px;
+  color: #000000;
+  background-color: #eeeeee;
+}
+table td{
+  padding : 7px 10px;
+}
+/*これでセル単位でのスタイル変更する*/
+table td:nth-child(1) {
+  text-align: center
+}
+
+button1 {
+ position: relative;
+ top: 40px;
+ left: 801px;
+}
+
+</style>
+{/literal}
+</html>

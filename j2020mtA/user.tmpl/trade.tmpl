@@ -1,0 +1,144 @@
+<html>
+<head>  
+
+<link rel="stylesheet" type="text/css" href="../Smarty/css/user/user.css">
+<meta charset = "utf-8">
+<title>記念品詳細</title>
+
+<script type="text/javascript">
+<!--
+function set_func_form(fn,pm){
+    document.form1.target = "_self";
+    document.form1.func.value = fn;
+    document.form1.param.value = pm;
+    document.form1.submit();
+}
+
+
+// -->
+</script>
+
+{literal}
+<style>
+li {width: 200px;}
+li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    }
+ul{overflow: hidden;}
+li{float: left;}
+ul li{display: inline;}
+li {text-align: center;}
+</style>
+<script type="text/javascript">
+<!--
+    //交換判定function
+    function butn(){
+
+        var Souvenir = document.getElementsByName('Souvenir');
+        var User = document.getElementsByName('User');
+        
+        if( parseInt(Souvenir[0].value) <= parseInt(User[0].value) )
+        {
+			set_func_form('set','')
+        }
+        else{
+			
+            alert("ポイントが不足しています");
+			
+        }
+        
+    }
+
+
+// -->
+</script>
+
+
+{/literal}
+
+</head>
+
+
+
+
+
+<body>
+<text><h1>双葉町災害対策会社</h1></text>
+<div align = "right">
+<button onclick="location.href='./sign_up.php'">新規登録</button>
+<button onclick="location.href='./log_in.php'">ログイン</button>
+</div> 
+<ul>
+<li><a href="./top.php"><h3>ホーム</h3></a></li>
+<li><a href="./group.php"><h3>団体挨拶</h3></a></li>
+<li><a href="./vor.php"><h3>ボランティア参加</h3></a></li>
+<li><a href="./help.php"><h3>お問い合わせ</h3></a></li>
+<li><a href="./my_page.php"><h3>マイページ</h3></a></li>
+<li><a href="./souvenir.php"><h3>記念品</h3></a></li>
+</ul>  
+<h1 style="text-align:center">記念品の詳細</h1><br>
+
+<!-- コンテンツ　-->
+
+
+<div style="text-align:center;">
+<form name="form1" action="{$smarty.server.PHP_SELF}" method="post" >
+<img src="image/{$smarty.post.Souvenir_pass}" style=" width:300px; height:300px;">
+
+<table align="center" border="1">
+
+<tr>
+	<th class="nobottom">記念品名</th>
+    <td class="nobottom"><strong>{$smarty.post.Souvenir_name|escape}</strong>
+    <input type="hidden" name="Souvenir_name" value="{$smarty.post.Souvenir_name|escape}" >
+    {if isset($err_array.Souvenir_name) }<br /><span class="red">{$err_array.Souvenir_name}</span>{/if}
+    </td>
+</tr>
+
+<tr>
+	<th class="nobottom">必要ポイント</th>
+    <td class="nobottom"><strong>{$smarty.post.Souvenir_points|escape}</strong>
+    <input type="hidden" name="Souvenir_points" value="{$smarty.post.Souvenir_points|escape}" >
+    {if isset($err_array.Souvenir_points) }<br /><span class="red">{$err_array.Souvenir_points}</span>{/if}
+    </td>
+</tr>
+
+<tr>
+	<th class="nobottom">記念品説明</th>
+    <td class="nobottom"><strong>{$smarty.post.Souvenir_introduction|escape}</strong>
+    <input type="hidden" name="Souvenir_introduction" value="{$smarty.post.Souvenir_introduction|escape}" >
+    {if isset($err_array.Souvenir_introduction) }<br /><span class="red">{$err_array.Souvenir_introduction}</span>{/if}
+    </td>
+</tr>
+
+<tr>
+    <th>所持ポイント</th>
+    <td>
+	<input type="hidden" name="User_point" value="{$smarty.post.$User_point|escape}" >
+    <strong>{$User_point}</strong>
+    </td>
+</tr>
+
+</table>
+
+<input type="hidden" name="func" value="" />
+<input type="hidden" name="param" value="" />
+<p class="center">
+<a href="souvenir.php"><input type="button" class="btn-push" value="戻る"></a>
+
+<!--交換の値　交換ボタンイベント-->
+<form name="send">
+    <input type="hidden" name="Souvenir" value="{$smarty.post.Souvenir_points|escape}"/>
+	<input type="hidden" name="Souvenir_id" value="{$Souvenir_id}" />
+    <input type="hidden" name="User" value="{$User_point}"/>
+	
+	<input type="button" class="btn-push" value="交換" onclick="butn()">
+</form>
+</p>
+</form>
+
+
+</body>
+</html>

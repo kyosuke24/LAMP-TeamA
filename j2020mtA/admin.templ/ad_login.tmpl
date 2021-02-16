@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<link rel="stylesheet" type="text/css" href="../Smarty/css/admin/admin.css">
+<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+<link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/login.css" rel="stylesheet">
+      <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+        <title>管理者サインイン</title>
+
+<script type="text/javascript">
+<!--
+// -->
+</script>
+
+</head>
+
+<body class="text-center">
+<div style="padding-top:200px"></div>
+<div class="card mx-auto" style="height:300px">
+<div class="card-header">
+
+<!-- 全体コンテナ　-->
+<div id="container">
+<div id="headTitle">
+<h3>管理者サインイン</h3>
+</div>
+<div class="card-body">
+<p></p>
+
+
+<!-- コンテンツ　-->
+<div id="inquiry">
+<p class="red"><?php echo cutil::ret2br($ERR_STR); ?></p>
+<form action="ad_login.php" method="post">
+<div class="input-group form-group">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-user"></i></span>
+</div>
+
+
+<input type="text" id="inputEmail" class="form-control" placeholder="メールアドレス"  maxlength="30" name="Admin_mail" value="" style="ime-mode: disabled;"/>
+</div>
+
+
+
+<div class="input-group form-group">
+<div class="input-group-prepend">
+<span class="input-group-text"><i class="fas fa-key"></i></span>
+</div>
+
+<input type="password" id="inputPassword" class="form-control" placeholder="パスワード"  maxlength="30" name="Admin_password" value="" style="ime-mode: disabled;"/>
+</div>
+
+
+
+
+<div class="form-group">
+<a href="ad_management.php"/  class="login_btn  btn float-right"/>戻る</a>
+<p class="center">
+<input type="submit" value="ログイン"  class="login_btn btn float-right"/>
+</p>
+</div>
+</form>
+<!-- /コンテンツ　-->
+</div>
+</body>
+
+{literal}
+<style>
+
+</style>
+{/literal}
+</html>

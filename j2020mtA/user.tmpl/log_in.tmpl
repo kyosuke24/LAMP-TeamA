@@ -1,0 +1,90 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="../Smarty/css/user/user.css">
+<meta charset='utf-8'>
+
+<title>ユーザーログイン</title>
+{literal}
+<style>
+  .box_head{
+
+    margin: 5em;
+
+    border: solid 3px #000000;
+
+    background-color: #ffffff;
+
+  }
+</style>
+
+<style>
+li {width: 200px;}
+li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    }
+ul{overflow: hidden;}
+li{float: left;}
+ul li{display: inline;}
+li {text-align: center;}
+</style>
+{/literal}
+
+</head>
+
+<body>
+
+<text><h1>双葉町災害対策会社</h1></text>
+<div align = "right">
+<button onclick="location.href='./sign_up.php'">新規登録</button>
+<button onclick="location.href='./log_in.php'">ログイン</button>
+</div> 
+<ul>
+<li><a href="./top.php"><h3>ホーム</h3></a></li>
+<li><a href="./group.php"><h3>団体挨拶</h3></a></li>
+<li><a href="./vor.php"><h3>ボランティア参加</h3></a></li>
+<li><a href="./help.php"><h3>お問い合わせ</h3></a></li>
+<li><a href="./my_page.php"><h3>マイページ</h3></a></li>
+<li><a href="./souvenir.php"><h3>記念品</h3></a></li>
+</ul>
+   <br><br><br><br><br>
+
+<div class="box_head">
+
+  <center><h1>ログイン</h1></center>
+  <br>
+  <center>
+    <div style =margin-left:0px;">
+       <div>メールアドレス
+       <textarea name="test" id="1" cols="100" rows="1"></textarea>
+       </div>
+    </div>
+  </center>
+<br><br><br>
+
+   <center>
+    <div>　　パスワード
+       <textarea name="test" id="1" cols="100" rows="1"></textarea>
+    </div>
+   <br><br><br>
+ 
+    <table>
+      <tr>
+        <td> 
+          <button style="width:90px; height:40px" onclick="location.href='./top.php'" >ログイン</button>
+        </td>
+      <td><text>　　　　　　</text></td>
+        <td> 
+          <button style="width:90px; height:40px" onclick="location.href='./sign_up.php'"> 新規登録</button>
+        </td>
+      </tr>
+    </table>
+
+   <br><br>
+   </center>
+  <br>
+
+</body>

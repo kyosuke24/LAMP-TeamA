@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS Help_table;
+CREATE TABLE Help_table (
+Help_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+User_mail TEXT,
+Help_content TEXT,
+Help_flag TINYINT DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

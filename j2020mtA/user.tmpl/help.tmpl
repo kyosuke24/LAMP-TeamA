@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<!-- ボランティア募集 -->
+<!-- 編集時にはプラグインNunjucksを切り替える -->
+<html lang="ja">
+
+ <head>
+    <link rel="stylesheet" type="text/css" href="../Smarty/css/user/group.css">
+
+    <meta charset="utf-8">
+    <!--これは忘れない！bootstrap公式サイトのcss--><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--<link rel="apple-touch-icon" sizes="76x76" href="./img/apple-icon.png">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />-->
+
+    <title>お問い合わせ</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="../Smarty/templates/user/css/bootstrap-test.css" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <!-- <link href="./demo/demo.css" rel="stylesheet" /> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../Smarty/css/user/bootstrap.min.css">
+
+    <!--これがないとモーションが動かない-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Favicons --> <!--サイトタブに表示させるアイコン-->
+    <link href="/img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts --> <!--Google検索は使わないので必要ないかも-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="../Smarty/templates/user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../Smarty/templates/user/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../Smarty/templates/user/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../Smarty/templates/user/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../Smarty/templates/user/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../Smarty/templates/user/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../Smarty/templates/user/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="../Smarty/templates/user/vendor/aos/aos.css" rel="stylesheet">
+  
+    {literal}
+    <script type="text/javascript">
+          //ボタン判定function
+          function butn(){
+            var btntxt = document.getElementsByName('button2');
+              if('新規登録/ログイン' == btntxt)
+              {
+                  window.location.href = "http://wiz.developluna.jp/~j2020tmA/user/login.php";
+              }
+              else
+              {
+                window.location.href = "userlogout.php";
+              }
+              
+          }
+      </script>
+      {/literal}
+ </head>
+
+
+ <body>
+   <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+      <div class="container d-flex align-items-center">
+        <div class="contact-info mr-auto">
+          <ul>
+            <li class="active"><a href="./top.php">ホーム</a></li>
+            <li><a href="./group.php">団体挨拶</a></li>
+            <li><a href="./vor.php">ボランティア参加</a></li>
+            <li><a href="./help.php">お問い合わせ</a></li>
+            <li><a href="./my_page.php">マイページ</a></li>
+            <li><a href="./souvenir.php">記念品</a></li>
+          </ul>
+        </div>      
+      </div>
+    </div>
+
+   <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top ">
+      <div class="container d-flex align-items-center">
+        <h1 class="logo mr-auto"><a href="#header" class="scrollto">双葉町災害対策会社</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#header" class="logo mr-auto scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <nav class="nav-menu d-none d-lg-block">             
+          <div class="cta">
+            <a class="scrollto" name="button" style="font-family: serif;" onclick="butn()">{$button}</a>          
+          </div> 
+        </nav><!-- .nav-menu -->
+      </div>
+    </header><!-- End Header -->
+
+
+   <!--見出し-->
+    <h1 style="margin-top:130px;text-align:center;position:relative;top: 40px;margin-bottom: 40px;font-family:serif;">── お問い合わせ ──</h1><br>
+
+   <!--お問い合わせフォーム-->
+    <div id="inquiry" style="text-align:center;">
+      {if $err_flag != '' }
+        <p>{$err_flag}</p>
+      {/if}
+    </div>
+
+    <form name="form1" action="{$smarty.server.PHP_SELF}" method="post" >
+
+      <input type="hidden"   name="to_mail" value="{$smarty.post.to_mail|escape}">
+        {if isset($err_array.to_mail) }<br />
+      <span class="red">{$err_array.to_mail}</span>{/if}
+
+     <div class="container" ><!--hidden 非表示にする-->
+        <!-- お問い合わせタイトル -->
+        <p><span class="title" style="width: 270px;font-size: 24px;padding: 10px;position: relative;top: -20px;left: 40px;padding-top: 30px;padding-bottom: 30px;">タイトル</span>
+            <input type="text" name="mail_title" value="{$smarty.post.mail_title|escape}"  placeholder="" style="position: relative;top: -20px;width: 600px;height: 56px;background-color: #F2F2F1;border: #F2F2F1;left: 140px;" required>
+              {if isset($err_array.mail_title) }<br />
+            <span class="red">{$err_array.mail_title}</span>{/if}
+        </p>
+
+        <!-- 自分のメールアドレス -->
+        <p><span class="text" style="width: 270px;font-size: 24px;padding: 10px;position: relative;top: -34px;text-align: center;">メールアドレス</span>
+            <input type="text" name="from_mail" value="{$smarty.post.from_mail|escape}"  placeholder="" style="position: relative;width: 600px;height: 56px;top: -34px;left: 67px;background-color: #F2F2F1;border: #F2F2F1;" required>
+              {if isset($err_array.from_mail) }<br />
+            <!--未入力の際の処理--><span class="red">{$err_array.from_mail}</span>{/if}
+        </p>
+
+        <!-- 内容 -->
+        <p><span class="necessary" style="width: 270px;font-size: 24px;padding: 10px;position: relative;top: -124px;">お問い合わせ内容</span>
+          <textarea rows="7" cols="60" name="mail_comment" style="resize: none;width: 600px;height: 166px;position: relative;top: -45px;left: 43px;" required>{$smarty.post.mail_comment|escape}</textarea>
+            {if isset($err_array.mail_comment) }<br />
+          <span class="red">{$err_array.mail_comment}</span>{/if}
+        </p>
+
+          <input type="hidden" name="func" value="conf" />
+          <input type="hidden" name="param" value="" />
+
+          <input type="submit" class="btn-push" style="position: relative;top: -114px;left: 883px;" value="確認" />
+
+        <!--試験用-
+            <div class="form-group">
+              <div class="form-label-wrapper">
+                <label class="form-label">名前</label><span class="form-field-status form-field-status-required">必須</span>
+              </div>
+              <div class="form-field-wrapper">
+                <span class="wpcf7-form-control-wrap form-name"><input type="text" name="form-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-input textsp input-xlarge" aria-required="true" aria-invalid="false"></span>
+              </div>
+              <p></p>
+            </div>
+            -->
+     </div>
+    </form>
+
+
+    <!-- 画面上部へ遷移するボタン -->
+      <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+      <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+      <script src="../Smarty/templates/user/vendor/jquery/jquery.min.js"></script>
+      <script src="../Smarty/templates/user/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="../Smarty/templates/user/vendor/jquery.easing/jquery.easing.min.js"></script>
+      <script src="../Smarty/templates/user/vendor/php-email-form/validate.js"></script>
+      <script src="../Smarty/templates/user/vendor/owl.carousel/owl.carousel.min.js"></script>
+      <script src="../Smarty/templates/user/vendor/venobox/venobox.min.js"></script>
+      <script src="../Smarty/templates/user/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+      <script src="../Smarty/templates/user/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+      <script src="../Smarty/templates/user/js/js/main.js"></script>
+
+    <!--何のスクリプト？-->
+      <script type="text/javascript">
+        function set_func_form(fn,pm){
+            document.form1.target = "_self";
+            document.form1.func.value = fn;
+            document.form1.param.value = pm;
+            document.form1.submit();
+        }
+      </script>
+
+ </body>
+</html>

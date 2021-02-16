@@ -1,0 +1,102 @@
+DROP TABLE IF EXISTS User_table;
+CREATE TABLE User_table (
+User_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+User_name VARCHAR(100)    NOT NULL DEFAULT '',
+User_kana VARCHAR(100)    NOT NULL DEFAULT '',
+User_post INT NOT NULL,
+User_address TEXT,
+User_tell BIGINT NOT NULL,
+User_mail TEXT,
+User_pass TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into User_table values(
+1,'福島太郎','フクシマタロウ',1234567,'福島県福島市',12345728910,'wiz@docomo','abc123'
+);
+
+insert into User_table values(
+2,'郡山次郎','コウリヤマジロウ',1234568,'福島県郡山市',10223467890,'wiz@icloud','def456'
+);
+
+insert into User_table values(
+3,'白河三郎','シラカワサブロウ',1234569,'福島県白河市',12234257891,'wiz@gmail','ghi789'
+);
+
+
+
+DROP TABLE IF EXISTS Top_table;
+CREATE TABLE Top_table (
+Top_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Top_pass TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS Vor_table;
+CREATE TABLE Vor_table (
+Vor_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Vor_name VARCHAR(100)    NOT NULL DEFAULT '',
+Vor_venue TEXT NOT NULL,
+Vor_schedule TEXT NOT NULL,
+Vor_num INT DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS Vorparts_table;
+CREATE TABLE Vorparts_table (
+Vorparts_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+User_id   INT NOT NULL,
+Vor_id   INT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS Spot_table;
+CREATE TABLE Spot_table (
+Spot_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Spot_name VARCHAR(100)    NOT NULL DEFAULT '',
+Spot_pass TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS Souvenir_table;
+CREATE TABLE Souvenir_table (
+Souvenir_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Souvenir_name VARCHAR(100)    NOT NULL DEFAULT '',
+Souvenir_points INT NOT NULL DEFAULT 0,
+Souvenir_introduction TEXT,
+Souvenir_pass TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS Change_table;
+CREATE TABLE Change_table (
+Change_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Souvenir_id   INT NOT NULL,
+User_id   INT NOT NULL,
+Change_num INT NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS Help_table;
+CREATE TABLE Help_table (
+Help_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Help_mail TEXT,
+Help_content TEXT,
+Help_flag TINYINT DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+DROP TABLE IF EXISTS Admin_table;
+CREATE TABLE Admin_table (
+Admin_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Admin_name VARCHAR(100)    NOT NULL DEFAULT '',
+Admin_mail TEXT,
+Admin_pass TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

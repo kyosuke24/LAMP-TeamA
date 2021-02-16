@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+<link rel="stylesheet" type="text/css" href=../../css/admin/main_admin.css>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="content-style-type" content="text/css" />
+    <meta http-equiv="content-script-type" content="text/javascript" />
+    <title>お問い合わせ管理</title>
+</head>
+
+<!--
+やることメモ
+　・操作の[返信][削除]の間の空白をcssで記述する
+
+-->
+
+<body>
+<div id="page">
+<header><h1>お問い合わせ管理</h1></header>
+
+<nav>
+<ul>
+    <li><a href="./log_out.php">ログアウト</a></li>
+    <li><a href="./top_edit.php">トップページ管理</a></li>
+    <li><a href="./ad_management.php">管理者管理</a></li>
+    <li><a href="./ad_sign.php">管理者登録</a></li>
+    <li><a href="./user_management.php">ユーザー管理</a></li>
+    <li><a href="./vor_list.php">ボランティア管理</a></li>
+    <li><a href="./vor_edit.php">ボランティア編集</a></li>
+    <li><a href="./help_edit.php">お問い合わせ</a></li>
+    <li><a href="./group_edit.php">団体からの挨拶編集</a></li>
+    <li><a href="./souvenir_list.php">記念品管理</a></li>
+    <li><a href="./souvenir_edit.php">記念品編集</a></li>
+</ul>
+</nav>
+
+<table border="1" style="border-collapse: collapse" bordercolor="#000000">
+
+<tr><th>ID</th><th>メド</th><th>本文</th><th>操作</th></tr>
+<tr><td>1</td><td>l1@wiz.jp</td><td>参加できません</td><td><input type="button" value="返信" > <input type="button" value="削除" ></td></tr>
+<tr><td>2</td><td>l2@wiz.jp</td><td>参加します</td><td><input type="button" value="返信" > <input type="button" value="削除" ></td></tr>
+<tr><td>3</td><td>l3@wiz.jp</td><td>参加できません</td><td><input type="button" value="返信" > <input type="button" value="削除" ></td></tr>
+<tr><td>4</td><td>l4@wiz.jp</td><td>参加できません</td><td><input type="button" value="返信" > <input type="button" value="削除" ></td></tr>
+</table>
+</div>
+</body>
+
+<!--css-->
+{literal}
+<style>
+h1{
+    font-size:medium;
+    margin:0;
+    padding-top:15px;
+    text-align:center;
+}
+nav {
+    float:left;
+}
+ul {
+	width: 250px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #eeeeee;
+}
+li a {
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+	color: #000000;
+}
+li {
+	text-align: center;
+}
+li:last-child {
+	border-bottom: none;
+}
+li a.active {
+	color: #ffffff;
+	background-color: #da3c41;
+}
+li a:hover:not(.active) {
+	color: #ffffff;
+	background-color: #1b2538;
+
+/*テーブル*/
+}
+table {
+    position: relative;
+    top: 50px;
+    left: 70px;
+}
+table th{
+  padding : 7px 90px;
+  color: #ffffff;
+  background-color: #eeeeee;
+}
+table td{
+  padding : 7px 10px;
+}
+/*これでセル単位でのスタイル変更する*/
+table td:nth-child(1) {
+  text-align: center
+}
+table td:nth-child(4) {
+  text-align: center
+}
+</style>
+{/literal}
+</html>

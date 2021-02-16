@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS Souvenir_table;
+CREATE TABLE Souvenir_table (
+Souvenir_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Souvenir_name VARCHAR(100)    NOT NULL DEFAULT '',
+Souvenir_points INT NOT NULL DEFAULT 0,
+Souvenir_introduction TEXT,
+Souvenir_pass TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

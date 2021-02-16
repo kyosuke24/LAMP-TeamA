@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS Greet_table;
+CREATE TABLE Greet_table (
+Greet_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Greet_comment	VARCHAR(50) NOT NULL DEFAULT '',
+Greet_pass	VARCHAR(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into Greet_table values(
+default,
+'何でもないことでも何でもないかもしれなくなくもない',
+'image/kinen.jpg'
+);

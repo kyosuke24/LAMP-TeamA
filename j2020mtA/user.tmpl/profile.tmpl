@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang = "ja">
+
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="../Smarty/css/user/sign_up.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+<!-- CSS Files -->
+<link href="../Smarty/templates/user/css/bootstrap-test.css" rel="stylesheet" />
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../Smarty/css/user/bootstrap.min.css">
+<!-- Vendor CSS Files -->
+<link href="../Smarty/templates/user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="../Smarty/templates/user/vendor/icofont/icofont.min.css" rel="stylesheet">
+<link href="../Smarty/templates/user/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+ <link href="../Smarty/templates/user/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="../Smarty/templates/user/vendor/remixicon/remixicon.css" rel="stylesheet">
+<link href="../Smarty/templates/user/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="../Smarty/templates/user/vendor/venobox/venobox.css" rel="stylesheet">
+<link href="../Smarty/templates/user/vendor/aos/aos.css" rel="stylesheet">
+<!-- Template Main CSS File -->
+<link href="../Smarty/css/user/user.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー詳細</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+<script type="text/javascript">
+<!--
+function set_func_form(fn,pm){
+    document.form1.target = "_self";
+    document.form1.func.value = fn;
+    document.form1.param.value = pm;
+    document.form1.submit();
+}
+// -->
+</script>
+</head>
+<body>
+<div id="page">
+
+<title>アカウント設定</title>
+
+</head>
+
+<body>
+<!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top ">
+    <div class="container d-flex align-items-center">
+      <div class="contact-info mr-auto">
+        <ul>
+          <li class="active"><a href="./top.php">ホーム</a></li>
+          <li><a href="./group.php">団体挨拶</a></li>
+          <li><a href="./vor.php">ボランティア参加</a></li>
+          <li><a href="./help.php">お問い合わせ</a></li>
+          <li><a href="./my_page.php">マイページ</a></li>
+          <li><a href="./souvenir.php">記念品</a></li>
+        </ul>
+      </div>      
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo mr-auto"><a href="#header" class="scrollto">双葉町災害対策会社</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="#header" class="logo mr-auto scrollto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav class="nav-menu d-none d-lg-block">             
+      <div class="cta">
+        <a href="./sign_up.php" class="scrollto">新規登録</a>
+        <a href="./log_in.php" class="scrollto">ログイン</a>
+      </div> 
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+
+<!-- コンテンツ　-->
+<div style="text-align:center;">
+<form name="form1" action="{$smarty.server.PHP_SELF}" method="post" >
+<div align = "right">
+</div>
+
+<p style="text-align: center"><h1 style="text-align:center; margin-top:130px;">アカウント設定</h1><br></p>
+
+<br>
+
+<div class="container">
+<div class="row">
+<div class="col-11 offset-1">
+
+<table border="1" class="table table-bordered">
+
+<tbody>
+
+<tr>
+<th>名前<span class="red"></span></th>
+  <td width="70%"><input type="text" name="User_name" size="50" value="{$smarty.post.User_name|escape}" />
+        {if isset($err_array.User_name) }<br /><p class="red">{$err_array.User_name}</p>{/if}
+    </td>
+</tr>
+
+<tr>
+<th>かな<span class="red"></span></th>
+  <td width="70%"><input type="text" name="User_kana" size="50" value="{$smarty.post.User_kana|escape}" />
+        {if isset($err_array.User_kana) }{$err_array.User_kana}{/if}
+    </td>
+</tr>
+
+<tr>
+<th>郵便番号<span class="red"></span></th>
+  <td width="70%"><input type="text" name="User_post" size="50" value="{$smarty.post.User_post|escape}" />
+        {if isset($err_array.User_post) }<br /><p class="red">{$err_array.User_post}</p>{/if}
+    </td>
+</tr>
+
+<tr>
+<th>住所<span class="red"></span></th>
+  <td width="70%"><input type="text" name="User_address" size="50" value="{$smarty.post.User_address|escape}" />
+        {if isset($err_array.User_address) }<br /><p class="red">{$err_array.User_address}</p>{/if}
+    </td>
+</tr>
+
+<tr>
+<th>電話番号<span class="red"></span></th>
+  <td width="70%"><input type="text" name="User_tell" size="50" value="{$smarty.post.User_tell|escape}" />
+        {if isset($err_array.User_tell) }<br /><p class="red">{$err_array.User_tell}</p>{/if}
+    </td>
+</tr>
+
+<tr>
+<th>メールアドレス<span class="red"></span></th>
+  <td width="70%"><input type="text" name="User_mail" size="50" value="{$smarty.post.User_mail|escape}" />
+      {if isset($err_array.User_mail) }<br /><p class="red">{$err_array.User_mail}</p>{/if}
+    </td>
+</tr>
+
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<input type="hidden" name="func" value="conf" />
+<input type="hidden" name="param" value="" />
+<input type="hidden" name="User_id" value="{$rows.User_id}" />
+<p class="center"><input type="submit" class="btn-push" value="確認" /></p>
+</p>
+</form>
+
+
+</body>
+
+</html>

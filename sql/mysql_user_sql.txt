@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS User_table;
+CREATE TABLE User_table (
+User_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+User_name VARCHAR(100)    NOT NULL DEFAULT '',
+User_kana VARCHAR(100)    NOT NULL DEFAULT '',
+User_post INT NOT NULL,
+User_address TEXT,
+User_tell BIGINT NOT NULL,
+User_mail TEXT,
+User_pass TEXT,
+User_point INT DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+insert into User_table values(
+1,'福島太郎','フクシマタロウ',1234567,'福島県福島市',12345728910,'wiz@docomo','abc123',default
+);
+
+insert into User_table values(
+2,'郡山次郎','コウリヤマジロウ',1234568,'福島県郡山市',10223467890,'wiz@icloud','def456',default
+);
+
+insert into User_table values(
+3,'白河三郎','シラカワサブロウ',1234569,'福島県白河市',12234257891,'wiz@gmail','ghi789',default
+);

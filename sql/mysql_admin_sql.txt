@@ -1,0 +1,18 @@
+DROP TABLE IF EXISTS Admin_table;
+CREATE TABLE Admin_table (
+Admin_id   INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Admin_name VARCHAR(100)    NOT NULL DEFAULT '',
+Admin_kana VARCHAR(100)    NOT NULL DEFAULT '',
+Admin_mail TEXT,
+Admin_pass VARCHAR(50)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+insert into Admin_table values(
+default,
+'菅野',
+'カンノ',
+'wiz@gmail.com',
+'788cfc35c2fd51a61879b717d8baee278461630c
+'
+);

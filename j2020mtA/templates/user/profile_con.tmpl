@@ -1,0 +1,85 @@
+<html lang = "ja">
+<herd>
+
+<link rel="stylesheet" type="text/css" href=../../css/user/main_user.css>
+
+<meta chaeset = "UTF-8">  
+<title>プロフィール設定</title>
+{literal}
+<style>
+li {width: 200px;}
+li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    }
+ul{overflow: hidden;}
+li{float: left;}
+ul li{display: inline;}
+li {text-align: center;}
+</style>
+
+<style>
+.address {
+    display: flex;
+}
+.address_item {
+    width: 100%;
+}
+</style>
+{/literal}
+</head>
+<body>
+
+<text><h1>双葉町災害対策会社</h1></text>
+<div align = "right">
+<button onclick="location.href='./sign_up.php'">新規登録</button>
+<button onclick="location.href='./log_in.php'">ログイン</button>
+</div> 
+<ul>
+<li><a href="./top.php"><h3>ホーム</h3></a></li>
+<li><a href="./group.php"><h3>団体挨拶</h3></a></li>
+<li><a href="./vor.php"><h3>ボランティア参加</h3></a></li>
+<li><a href="./help.php"><h3>お問い合わせ</h3></a></li>
+<li><a href="./my_page.php"><h3>マイページ</h3></a></li>
+<li><a href="./souvenir.php"><h3>記念品</h3></a></li>
+</ul>
+<br><br>
+<div align = "center">
+<label for = "name"><font size =8>プロフィール確認</font>
+<br>
+<br>
+<label for = "name"><font size =5>氏名：福島太郎</font>
+<br>
+<br>
+<label for = "name"><font size =5>かな：ふくしまたろう</font>
+<br>
+<br>
+<label for = "name"><font size =5>郵便番号 : 961 - 0000</font>
+<br>
+<br>
+<label for = "name"><font size =5>住所 ： 福島県伊達郡川俣町</font>
+<br>
+<br>
+<label for = "name"><font size =5>携帯番号 : 123-4567-8910</font>
+<br>
+<br>
+<label for = "name"><font size =5>メールアドレス : hukushima@docomo.co.jp</font>
+<br>
+</div>
+<br>
+<center>
+    <table>
+      <tr>
+        <td> 
+          <button style="width:90px; height:40px" onclick="location.href='./top.php'" >戻る</button>
+        </td>
+      <td><text>　　　　　　</text></td>
+        <td> 
+          <button style="width:90px; height:40px" onclick="location.href='./top.php'"> 確定</button>
+        </td>
+      </tr>
+    </table>
+</center>
+</body>
+</html>
